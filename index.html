@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBSIDIAN - Premium Bıçak Kataloğu</title>
+    <meta name="description" content="Obsidian - Zanaatkarlık ve yüksek kalitenin birleştiği premium bıçak koleksiyonu.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">OBSIDIAN</div>
+        <ul class="nav-links">
+            <li><a href="#koleksiyon">Koleksiyon</a></li>
+            <li><a href="#malzemeler">Malzemeler</a></li>
+            <li><a href="#hakkimizda">Hakkımızda</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+        <div class="menu-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Zamanın Ötesinde Keskinlik</h1>
+            <p>Usta ellerde şekillenen, nesilden nesile aktarılacak bir zanaatkarlık eseri.</p>
+            <a href="#koleksiyon" class="btn btn-primary">Koleksiyonu İncele</a>
+        </div>
+    </header>
+
+    <!-- Collection Section -->
+    <section class="collection" id="koleksiyon">
+        <div class="section-title">
+            <h2>Özel Seri</h2>
+            <p>Her bir parça eşsizdir. Detayları keşfetmek için dokunun.</p>
+        </div>
+        
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" onclick="openModal('obsidian')">
+                <div class="product-img-wrapper">
+                    <img src="assets/knife_obsidian_1778055226538.png" alt="Obsidian Şef Bıçağı">
+                    <div class="product-overlay">
+                        <span class="view-details">Detayları Gör</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Obsidian Şef</h3>
+                    <p>Şam Çeliği & Abanoz Ağacı</p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" onclick="openModal('copper')">
+                <div class="product-img-wrapper">
+                    <img src="assets/knife_copper_1778055294335.png" alt="Bakır Detaylı Çakı">
+                    <div class="product-overlay">
+                        <span class="view-details">Detayları Gör</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Bakır Vadisi</h3>
+                    <p>Paslanmaz Çelik & Bakır-Ceviz</p>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" onclick="openModal('carbon')">
+                <div class="product-img-wrapper">
+                    <img src="assets/knife_carbon_1778055422591.png" alt="Karbon Taktik Bıçak">
+                    <div class="product-overlay">
+                        <span class="view-details">Detayları Gör</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3>Karbon Gölge</h3>
+                    <p>Yüksek Karbonlu Çelik & Karbon Fiber</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials / About Section -->
+    <section class="about" id="hakkimizda">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Ustalık ve Tutku</h2>
+                <p>Bizim için bir bıçak sadece kesici bir alet değil; sanatın, sabrın ve en iyi malzemelerin bir araya geldiği bir şaheserdir. Bıçaklarımız, geleneksel dövme teknikleriyle modern mühendisliğin kusursuz bir sentezidir.</p>
+                <p>Dünyanın dört bir yanından özenle seçilen Şam çeliği, dayanıklı karbon fiber ve nadide ağaç türleri ile her bir parçaya ruh katıyoruz. Sadece bir bıçak değil, bir miras üretiyoruz.</p>
+            </div>
+            <div class="about-materials" id="malzemeler">
+                <div class="material-card">
+                    <h4>Damascus (Şam) Çeliği</h4>
+                    <p>Yüzlerce katmanın dövülerek oluşturduğu eşsiz desenler ve benzersiz dayanıklılık.</p>
+                </div>
+                <div class="material-card">
+                    <h4>Nadir Ağaç Saplar</h4>
+                    <p>Abanoz ve ceviz gibi yoğun, suya ve neme dayanıklı üstün tutuş sağlayan malzemeler.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="iletisim">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Bizimle İletişime Geçin</h2>
+                <p>Özel siparişleriniz veya koleksiyonumuz hakkında bilgi almak için formu doldurabilirsiniz.</p>
+                <div class="social-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Pinterest</a>
+                    <a href="#">Mail</a>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault();">
+                <div class="input-group">
+                    <input type="text" id="name" required placeholder="Adınız Soyadınız">
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required placeholder="E-posta Adresiniz">
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="4" required placeholder="Mesajınız"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 OBSIDIAN Bıçakçılık. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="Ürün Görseli">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle">Ürün Adı</h2>
+                    <p id="modalDesc" class="modal-desc">Ürün açıklaması burada yer alacak.</p>
+                    
+                    <div class="specs-table">
+                        <div class="spec-row">
+                            <span class="spec-label">Çelik Türü</span>
+                            <span class="spec-value" id="specSteel">Şam Çeliği (Damascus)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Sertlik</span>
+                            <span class="spec-value" id="specHardness">60-62 HRC</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Sap Malzemesi</span>
+                            <span class="spec-value" id="specHandle">Abanoz Ağacı</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Tam Boy</span>
+                            <span class="spec-value" id="specLength">32 cm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
